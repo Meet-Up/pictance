@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
 
   def ranking
+    UserPhotosWorker.perform_async(current_user.id)
     @scores = current_user.scores.includes(:friend).order(score: :desc)
     @scores = @scores.where(gender: params[:gender]) if params[:gender]
   end
