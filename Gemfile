@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'httpclient'
+gem 'nokogiri'
 
 group :production do
   gem 'pg'
