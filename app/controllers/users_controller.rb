@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+
   def index
   end
 
@@ -8,5 +10,10 @@ class UsersController < ApplicationController
   end
 
   def fetch_photo
+  end
+
+  def ranking
+    @scores = current_user.scores.includes(:friend).order(score: :desc)
+    @scores = @scores.where(gender: params[:gender]) if params[:gender]
   end
 end
