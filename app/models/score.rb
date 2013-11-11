@@ -1,14 +1,14 @@
 # == Schema Information
 #
-# Table name: photos
+# Table name: scores
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
-#  photo_id   :string(255)
+#  user_id    :string(255)
+#  friend_id  :string(255)
+#  score      :integer
 #  created_at :datetime
 #  updated_at :datetime
-#  photo_url  :string(255)
 #
 
-class Photo < ActiveRecord::Base
+class Score < ActiveRecord::Base
 end

@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/james2m/seedbank.git
+  revision: c6604d0d21fd3d3ba6fe9046b7bc8a4d9be9affe
+  specs:
+    seedbank (0.3.0.pre2)
+
+GIT
   remote: https://github.com/Meet-Up/pux_sdk.git
   revision: 01c443ad5c8931b0182a7bfb27d18c9e53a85c5d
   specs:
@@ -258,6 +264,7 @@ DEPENDENCIES
   rails_config
   sass-rails (~> 4.0.0)
   sdoc
+  seedbank!
   sidekiq
   sqlite3
   turbolinks

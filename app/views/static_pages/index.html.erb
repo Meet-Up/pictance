@@ -1,0 +1,38 @@
+<% content_for :head do %>
+	<%= stylesheet_link_tag "static_pages/index", media: "all" %>
+<% end %>
+<div class="main-wrapper">
+  <div class="mainvisual">
+  <h1>
+    <!--<img src="images/mainvisual.png" alt="Pictance ふたりのキョリをはかるアプリ">-->
+    <%= image_tag("mainvisual.png", :alt => "Pictance ふたりのキョリをはかるアプリ") %>
+  </h1>
+  <div class="btn-login">
+    <p><%= link_to "facebook IDで解析！", user_omniauth_authorize_path(:facebook) %></p>
+  </div>
+</div>
+<hr class="red">
+<div class="introduction">
+  <div class="photo-couple">
+	<h2>Pictanceを使えば、<br><span>自分に好意のある異性</span>に気付けます。</h2>
+  </div>
+</div>
+<div class="steps">
+  <div class="step">
+    <h3>１．facebookログイン</h3>
+    <p>Pictanceは、Facebook上の写真を全て解析し、自分と写っているときの相手の表情や、相手と自分とのキョリから、親密度を測定するアプリです。<br>まず、このページからFacebookIDでログインしてください。</p>
+  </div>
+  <div class="step">
+    <h3>２．相手の性別を選択</h3>
+	<p>相手は「男性のみ」「女性のみ」あるいは「全員」から選択できます。</p>
+  </div>
+  <div class="step">
+	<h3>３．心のキョリを測定</h3>
+	<p>「測定」ボタンを押すと、あなたとの心のキョリが近い人をランキング形式で表示します。<br>意外なあの人が、実はあなたに好意を寄せているのかも？</p>
+  </div>
+</div>
+<hr class="red">
+<div class="catchcopy">
+  <div class="photo-couples"></div>
+  <p>「好き」に、気付こう。</p>
+</div>
