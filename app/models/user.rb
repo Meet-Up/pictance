@@ -18,13 +18,10 @@
 #  name                   :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  facebook_token         :string(255)
 #
 
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  # devise :database_authenticatable, :registerable,
-         # :recoverable, :rememberable, :trackable, :validatable
   devise :database_authenticatable, :rememberable, :trackable
   devise :omniauthable, omniauth_providers: [:facebook]
 

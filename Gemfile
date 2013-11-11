@@ -13,6 +13,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'fb_graph'
+gem 'delayed_job_active_record'
 
 group :production do
   gem 'pg'
