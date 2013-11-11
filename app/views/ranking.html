@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Loadingぺーじだよ</title>
+			<link rel="stylesheet" href="">
+			<style>
+			/* ▼CSS アニメーション */
+			@-webkit-keyframes slide {
+					0% { -webkit-transform: translate3d(0, 0, 0); }
+					100% { -webkit-transform: translate3d(-895px, 0, 0); }
+			}
+			@-moz-keyframes slide {
+					0% { -moz-transform: translate3d(0, 0, 0); }
+					100% { -moz-transform: translate3d(-895px, 0, 0); }
+			}
+			@-ms-keyframes slide {
+					0% { -ms-transform: translate3d(0, 0, 0); }
+					100% { -ms-transform: translate3d(-895px, 0, 0); }
+			}
+			@-o-keyframes slide {
+					0% { -o-transform: translate3d(0, 0, 0); }
+					100% { -o-transform: translate3d(-895px, 0, 0); }
+			}
+			/* ▲CSS アニメーション */
+			body,div,ul,ol,li,
+			h1,h2,h3,h4,h5,h6,
+			form,input,p,img,hr {
+				margin: 0;
+				padding: 0;
+			}
+			ul, ol, dl, li {
+				list-style-type: none;
+				margin: 0px;
+				padding: 0px;
+			}
+			img {
+				display: block;
+				margin: 0;
+				padding: 0;
+				border-style: none;
+			}
+			body{
+				width: 100%;
+				min-width: 1000px;
+				font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+				background: url(images/background.png);
+				overflow: auto;
+				overflow-x : hidden;
+				font-size: 25px;
+				color: #666;
+			}
+			.clear{
+				clear: both;
+			}
+			.center {
+				text-align: center;
+			}
+			span {
+				color: #FF7272;
+			}
+			hr.red {
+				border: none;
+				width: 100%;
+				height: 6px;
+				background: url(images/back-red.png);
+			}
+			header {
+				position: absolute;
+				top:0px;
+				width: 100%;
+				height: 90px;
+				background: url(images/header.png) repeat-x;
+				background-position: center;
+			}
+			footer {
+				width: 100%;
+				height: 113px;
+				background: url(images/footer.png);
+			}
+			footer p {
+				text-align: center;
+				color: white;
+				padding-top: 40px;
+			}
+			.main-wrapper {
+				width: 100%;
+				height: 700px;
+				background: white;
+			}
+
+
+			/*こっから新しい*/
+			.header-wrapper {
+				width: 1000px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.header-wrapper img:hover {
+				opacity: 0.8;
+			}
+			.ranking .ranking-top {
+				width: 1000px;
+				margin-top: 130px;
+				margin-bottom: 50px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.ranking .ranking-top img {
+				width: 170px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 30px;
+				border: 1px solid white;
+				-moz-box-shadow: 0 0 9px;
+				-webkit-box-shadow: 0 0 9px;
+				-o-box-shadow: 0 0 9px;
+				-ms-box-shadow: 0 0 9px;
+			}
+			.ranking .ranking-top p {
+				text-align: center;
+				line-height: 2.5em;
+				font-weight: normal;
+				font-size: 27px;
+				letter-spacing: 1px;
+			}
+			.ranking .select-gender {
+				width: 1000px;
+				margin-left: auto;
+				margin-right: auto;
+				background: url(images/arrow.png) no-repeat;
+				background-position: center 85%;
+			}
+			.ranking .select-gender p {
+				text-align: center;
+			}
+			.ranking .select-gender p img {
+				margin-right: 20px;
+				margin-left: 20px;
+				display: inline;
+			}
+			.ranking .ranking-main {
+				width: 766px;
+				height: auto;
+				margin-left: auto;
+				margin-right: auto;
+				background: url(images/heart.png)no-repeat;
+				background-position: right top;
+				overflow: hidden;
+				padding-bottom: 50px;
+			}
+			.ranking .ranking-main .ranking-list {
+				margin-bottom: -40px;
+				overflow: hidden;
+			}
+			.ranking .ranking-main .no1 {
+				background: url(images/rank.png)no-repeat;
+				background-position: left 70%;
+			}
+			.ranking .ranking-main .friend-name {
+				float: left;
+				width: 390px;
+				margin-top: 30px;
+				padding-top: 100px;
+				padding-left: 100px;
+			}
+			.ranking .ranking-main .friend-name h2 {
+				color: #FF7373;
+				font-size: 28px;
+				letter-spacing: 2px;
+			}
+			.ranking .ranking-main .no1 h2 {
+				font-size: 34px;
+			}
+			.ranking .ranking-main .friend-name h3 {
+				color: #777;
+				font-size: 20px;
+				font-weight: normal;
+				text-align: right;
+				padding-top: 10px;
+			}
+			.ranking .ranking-main .friend-photo {
+				width: 155px;
+				float: right;
+				padding-right: 40px;
+			}
+			.ranking .ranking-main .friend-photo img {
+				max-width: 148px;
+				max-height: 104px;
+				border: 1px solid white;
+				-moz-box-shadow: 0 0 2px black;
+				-webkit-box-shadow: 0 0 2px black;
+				-o-box-shadow: 0 0 2px black;
+				-ms-box-shadow: 0 0 2px black;
+				-moz-transform: rotate(-5deg);
+				-webkit-transform: rotate(-5deg);
+				-o-transform: rotate(-5deg);
+				-ms-transform: rotate(-5deg);
+				margin-top: 100px;
+			}
+			.ranking .twitter {
+				margin-top: 100px;
+				margin-bottom: 100px;
+			}
+			.ranking .ranking-bottom {
+				position: relative;
+				width: 100%;
+				height: 536px;
+			}
+			.ranking .ranking-bottom .photo-couples {
+				position: absolute;
+				width: 1000%;
+				height: 536px;
+				background: url(images/photo-couples.png) repeat-x;
+				-webkit-animation: slide 30s;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-timing-function: linear;
+				-webkit-transform: translate3d(0, 0, 0);
+				-moz-animation: slide 30s;
+				-moz-animation-iteration-count: infinite;
+				-moz-animation-timing-function: linear;
+				-moz-transform: translate3d(0, 0, 0);
+				z-index: 10;
+			}
+			.ranking .ranking-bottom .logo {
+				position: absolute;
+				top: 70px;
+				left: 50%;
+				margin-left: -284px;
+				z-index: 30;
+			}
+			.ranking .ranking-bottom .logo img:hover {
+				opacity: 0.8;
+				cursor: pointer;
+			}
+			</style>
+	</head>
+	<body>
+		<header>
+			<div class="header-wrapper">
+				<a href="index.html">
+					<img src="images/logo-header.png" alt="Pictance">
+				</a>
+			</div>
+		</header>
+		<div class="ranking">
+			<div class="ranking-top">
+				<img src="images/daniel.png" alt="ダニエル・ペレズ">
+				<p><span>Daniel Perez</span>さん</p>
+				<p>あなたに好意を持っている方は、こちらです！</p>
+			</div>
+			<div class="select-gender">
+				<p class="center">
+					<img src="images/gender-mandf-selected.png" alt="男性・女性">
+					<img src="images/gender-m.png" alt="男性・女性">
+					<img src="images/gender-f.png" alt="男性・女性">
+				</p>
+			</div>
+			<div class="ranking-main">
+				<div class="ranking-list">
+					<div class="friend-name no1">
+						<h2>１．曽根岡ゆうや</h2>
+						<h3>親密度: <big>80%</big></h3>
+					</div>
+					<div class="friend-photo">
+						<img src="images/mainvisual-back.png">
+					</div>
+				</div>
+				<div class="ranking-list">
+					<div class="friend-name">
+						<h2>２．曽根岡ゆうや</h2>
+						<h3>親密度: <big>80%</big></h3>
+					</div>
+					<div class="friend-photo">
+						<img src="images/mainvisual-back.png">
+					</div>
+				</div>
+				<div class="ranking-list">
+					<div class="friend-name">
+						<h2>３．曽根岡ゆうや</h2>
+						<h3>親密度: <big>80%</big></h3>
+					</div>
+					<div class="friend-photo">
+						<img src="images/mainvisual-back.png">
+					</div>
+				</div>
+				<div class="ranking-list">
+					<div class="friend-name">
+						<h2>４．曽根岡ゆうや</h2>
+						<h3>親密度: <big>80%</big></h3>
+					</div>
+					<div class="friend-photo">
+						<img src="images/mainvisual-back.png">
+					</div>
+				</div>
+				<div class="ranking-list">
+					<div class="friend-name">
+						<h2>５．曽根岡ゆうや</h2>
+						<h3>親密度: <big>80%</big></h3>
+					</div>
+					<div class="friend-photo">
+						<img src="images/mainvisual-back.png">
+					</div>
+				</div>
+				<div class="ranking-list">
+					<div class="friend-name">
+						<h2>６．曽根岡ゆうや</h2>
+						<h3>親密度: <big>80%</big></h3>
+					</div>
+					<div class="friend-photo">
+						<img src="images/mainvisual-back.png">
+					</div>
+				</div>
+				<div class="ranking-list">
+					<div class="friend-name">
+						<h2>７．曽根岡ゆうや</h2>
+						<h3>親密度: <big>80%</big></h3>
+					</div>
+					<div class="friend-photo">
+						<img src="images/mainvisual-back.png">
+					</div>
+				</div>
+				<div class="ranking-list">
+					<div class="friend-name">
+						<h2>８．曽根岡ゆうや</h2>
+						<h3>親密度: <big>80%</big></h3>
+					</div>
+					<div class="friend-photo">
+						<img src="images/mainvisual-back.png">
+					</div>
+				</div>
+				<div class="ranking-list">
+					<div class="friend-name">
+						<h2>９．曽根岡ゆうや</h2>
+						<h3>親密度: <big>80%</big></h3>
+					</div>
+					<div class="friend-photo">
+						<img src="images/mainvisual-back.png">
+					</div>
+				</div>
+				<div class="ranking-list">
+					<div class="friend-name">
+						<h2>１０．曽根岡ゆうや</h2>
+						<h3>親密度: <big>80%</big></h3>
+					</div>
+					<div class="friend-photo">
+						<img src="images/mainvisual-back.png">
+					</div>
+				</div>
+			</div>
+			<div class="twitter">
+				<p class="center">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="kouhoukouhoukou" data-lang="ja" data-size="large" data-count="none">ツイート</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0px],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</p>
+			</div>
+			<hr class="red">
+			<div class="ranking-bottom">
+				<div class="photo-couples"></div>
+				<div class="logo">
+					<a href="index.html">
+						<img src="images/logo.png" alt="Pictance">
+					</a>
+				</div>
+			</div>
+			<hr class="red">
+			<footer>
+				<p>&copy; Team Namix All right reserved.</p>
+			</footer>
+		</div>
+	</body>
+</html>
