@@ -75,9 +75,10 @@ class PostImageFace
   	end
 end
 
-key = 'RCGHACKA13'
-imageURL = "http://st1.pux.co.jp/test/480x640_w1.jpg"
-imageFile = "test.jpg"
+#key = 'RCGHACKA13'
+#imageURL = "http://st1.pux.co.jp/test/480x640_w1.jpg"
+#imageFile = "test.jpg"
+#imageURL = "http://lifeboard.jp/img/welcome_creator_akiho.png"
 
 #post = PostImageFace.new()
 #post.PostImageURL(key, imageURL, true) # POSTリクエスト
