@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Loadingぺーじだよ</title>
+			<link rel="stylesheet" href="">
+			<style>
+			/* ▼CSS アニメーション */
+			@-webkit-keyframes slide {
+					0% { -webkit-transform: translate3d(0, 0, 0); }
+					100% { -webkit-transform: translate3d(-895px, 0, 0); }
+			}
+			@-moz-keyframes slide {
+					0% { -moz-transform: translate3d(0, 0, 0); }
+					100% { -moz-transform: translate3d(-895px, 0, 0); }
+			}
+			@-ms-keyframes slide {
+					0% { -ms-transform: translate3d(0, 0, 0); }
+					100% { -ms-transform: translate3d(-895px, 0, 0); }
+			}
+			@-o-keyframes slide {
+					0% { -o-transform: translate3d(0, 0, 0); }
+					100% { -o-transform: translate3d(-895px, 0, 0); }
+			}
+			/* ▲CSS アニメーション */
+			body,div,ul,ol,li,
+			h1,h2,h3,h4,h5,h6,
+			form,input,p,img,hr {
+				margin: 0;
+				padding: 0;
+			}
+			ul, ol, dl, li {
+				list-style-type: none;
+				margin: 0px;
+				padding: 0px;
+			}
+			img {
+				display: block;
+				margin: 0;
+				padding: 0;
+				border-style: none;
+			}
+			body{
+				width: 100%;
+				min-width: 1000px;
+				font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+				background: url(images/background.png);
+				overflow: auto;
+				overflow-x : hidden;
+				font-size: 25px;
+				color: #666;
+			}
+			.clear{
+				clear: both;
+			}
+			.center {
+				text-align: center;
+			}
+			span {
+				color: #FF7272;
+			}
+			hr.red {
+				border: none;
+				width: 100%;
+				height: 6px;
+				background: url(images/back-red.png);
+			}
+			header {
+				position: absolute;
+				top:0px;
+				width: 100%;
+				height: 90px;
+				background: url(images/header.png) repeat-x;
+				background-position: center;
+			}
+			footer {
+				width: 100%;
+				height: 113px;
+				background: url(images/footer.png);
+			}
+			footer p {
+				text-align: center;
+				color: white;
+				padding-top: 40px;
+			}
+			.main-wrapper {
+				width: 100%;
+				height: 700px;
+				background: white;
+			}
+
+
+			/*こっから新しい*/
+			.header-wrapper {
+				width: 1000px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.header-wrapper img:hover {
+				opacity: 0.8;
+			}
+			.loading .loading-top {
+				width: 1000px;
+				margin-top: 130px;
+				margin-bottom: 50px;
+				margin-left: auto;
+				margin-right: auto;
+				background: url(images/arrow.png) no-repeat;
+				background-position: bottom;
+				padding-bottom: 50px;
+			}
+			.loading .loading-top img {
+				width: 170px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 30px;
+				border: 1px solid white;
+				-moz-box-shadow: 0 0 9px;
+				-webkit-box-shadow: 0 0 9px;
+				-o-box-shadow: 0 0 9px;
+				-ms-box-shadow: 0 0 9px;
+			}
+			.loading .loading-top p {
+				text-align: center;
+				line-height: 2.5em;
+				font-weight: normal;
+				font-size: 27px;
+				letter-spacing: 1px;
+			}
+			.loading .loading-main {
+				position: relative;
+				width: 100%;
+				height: 536px;
+			}
+			.loading .loading-main .photo-couples {
+				position: absolute;
+				width: 1000%;
+				height: 536px;
+				background: url(images/photo-couples.png) repeat-x;
+				-webkit-animation: slide 30s;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-timing-function: linear;
+				-webkit-transform: translate3d(0, 0, 0);
+				-moz-animation: slide 30s;
+				-moz-animation-iteration-count: infinite;
+				-moz-animation-timing-function: linear;
+				-moz-transform: translate3d(0, 0, 0);
+				z-index: 10;
+			}
+			.loading .loading-main .loading-circle {
+				position: absolute;
+				top:20px;
+				left: 50%;
+				width :300px;
+				height: 300px;
+				margin-left: -25px;
+				z-index: 40;
+			}
+			.loading .loading-main .loading-circle img {
+				width: 50px;
+			}
+			.loading .loading-main .photos {
+				position: relative;
+				top: 80px;
+				left: 50%;
+				width: 527px;
+				height: 370px;
+				margin-left: -265px;
+				z-index: 30;
+				display: block;
+			}
+			.loading .loading-main .photos p img {
+				display: inline;
+				max-width: 527px;
+				max-height: 370px;
+				border: 3px solid white;
+				-moz-box-shadow: 0 0 9px black;
+				-webkit-box-shadow: 0 0 9px black;
+				-o-box-shadow: 0 0 9px black;
+				-ms-box-shadow: 0 0 9px black;
+				-moz-transform: rotate(-5deg);
+				-webkit-transform: rotate(-5deg);
+				-o-transform: rotate(-5deg);
+				-ms-transform: rotate(-5deg);
+			}
+			.loading .loading-main .percent-friendly {
+				position: relative;
+				bottom: -20px;
+				z-index: 40;
+			}
+			.loading .loading-main .percent-friendly p {
+				text-align: center;
+				font-size: 40px;
+				font-weight: bold;
+				color: white;
+				letter-spacing: 6px;
+				text-shadow: 0 0 3px black;
+			}
+			.loading .loading-main .percent-friendly p big {
+				font-size: 70px;
+				margin-left: 30px;
+				letter-spacing: 10px;
+			}
+			.loading .loading-bottom {
+				margin-top:80px;
+				margin-bottom:80px;
+			}
+			.loading .loading-bottom p {
+				text-align: center;
+				font-size: 30px;
+				font-weight: bold;
+				letter-spacing: 3px;
+			}
+			.loading .loading-bottom .progress-bar {
+				width: 350px;
+				height: 15px;
+				margin-top: 50px;
+				margin-left: auto;
+				margin-right: auto;
+				background: #FFCFBF;
+			}
+			.loading .loading-bottom .progress-bar .progress-now {
+				width: 200px;
+				height: 15px;
+				background: #FF7373;
+			}
+
+			</style>
+	</head>
+	<body>
+		<header>
+			<div class="header-wrapper">
+				<a href="index.html">
+					<img src="images/logo-header.png" alt="Pictance">
+				</a>
+			</div>
+		</header>
+		<div class="loading">
+			<div class="loading-top">
+				<img src="images/daniel.png" alt="ダニエル・ペレズ">
+				<p><span>Daniel Perez</span>さん、こんにちは！</p>
+				<p>facebookから画像を取得しています……。</p>
+			</div>
+			<hr class="red">
+			<div class="loading-main">
+				<div class="photo-couples"></div>
+				<div class="loading-circle">
+					<img src="images/loading.gif">
+				</div>
+				<div class="photos">
+					<p class="center">
+						<img src="images/daniel.png">
+					</p>
+				</div>
+				<div class="percent-friendly">
+					<p>親密度<big>80%</big></p>
+				</div>
+			</div>
+			<hr class="red">
+			<div class="loading-bottom">
+				<p>少々お待ちください……</p>
+				<div class="progress-bar">
+					<div class="progress-now"></div>
+				</div>
+			</div>
+			<footer>
+				<p>&copy; Team Namix All right reserved.</p>
+			</footer>
+		</div>
+	</body>
+</html>
