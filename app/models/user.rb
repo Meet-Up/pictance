@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
   devise :omniauthable, omniauth_providers: [:facebook]
 
   has_many :data, class_name: 'PhotoData', foreign_key: 'user_id'
+  has_many :scores
 
 
   def self.new_with_session(params, session)

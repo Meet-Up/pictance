@@ -11,5 +11,6 @@ class UserPhotosWorker
         PhotoAnalyzerWorker.perform(photo.id, fb_photo.tags.to_json)
       end
     end
+    PhotoComputationWorker.perform(user.id)
   end
 end
