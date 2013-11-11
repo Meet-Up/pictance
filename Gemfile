@@ -13,7 +13,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'fb_graph'
-gem 'delayed_job_active_record'
+gem 'sidekiq'
 
 gem 'pux_sdk', git: 'https://github.com/Meet-Up/pux_sdk.git'
 
