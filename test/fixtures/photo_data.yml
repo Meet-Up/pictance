@@ -1,21 +1,29 @@
 # == Schema Information
 #
-# Table name: photos
+# Table name: photo_data
 #
 #  id         :integer          not null, primary key
 #  user_id    :integer
-#  photo_id   :string(255)
+#  photo_id   :integer
+#  x          :float
+#  y          :float
+#  smile      :float
 #  created_at :datetime
 #  updated_at :datetime
-#  photo_url  :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
   user_id: 1
-  photo_id: MyString
+  photo_id: 1
+  x: 1.5
+  'y': 1.5
+  smile: 1.5
 
 two:
   user_id: 1
-  photo_id: MyString
+  photo_id: 1
+  x: 1.5
+  'y': 1.5
+  smile: 1.5

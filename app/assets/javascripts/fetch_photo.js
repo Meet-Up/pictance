@@ -1,6 +1,7 @@
 $(function(){
 	/*
 	setInterval(function(){
+		*/
 		var ajaxURL = "/users/fetch_photo";
 
 		$.ajax({
@@ -12,7 +13,7 @@ $(function(){
 			error: function(){
 				console.log("社真の取得に失敗しました");
 			}
-		})
+		})/*
 	}, 5000)
 */
 })
