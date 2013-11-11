@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'fb_graph'
 
 group :production do
   gem 'pg'
