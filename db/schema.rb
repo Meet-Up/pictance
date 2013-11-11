@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131111175918) do
+ActiveRecord::Schema.define(version: 20131111181933) do
 
   create_table "photo_data", force: true do |t|
     t.integer  "user_id"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20131111175918) do
     t.float    "smile"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "done"
+    t.boolean  "done",       default: false
   end
 
   add_index "photo_data", ["photo_id"], name: "index_photo_data_on_photo_id"
