@@ -15,7 +15,7 @@ gem 'omniauth-facebook'
 gem 'fb_graph'
 gem 'sidekiq'
 gem 'rails_config'
-gem 'seedbank'
+gem 'seedbank', github: 'james2m/seedbank'
 
 gem 'pux_sdk', git: 'https://github.com/Meet-Up/pux_sdk.git'
 
