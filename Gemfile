@@ -12,6 +12,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'fb_graph'
+gem 'sidekiq'
+
+gem 'pux_sdk', git: 'https://github.com/Meet-Up/pux_sdk.git'
 
 group :production do
   gem 'pg'
