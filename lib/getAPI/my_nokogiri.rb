@@ -20,7 +20,6 @@ class MyNokogiri < Nokogiri::XML::SAX::Document
       		@result["ggg"]["hhh"][@param_key] = ""
     	elsif name == "name" || name == "val"
     	elsif name == "content"
-      		# new object
       		@result = {}
     	elsif name == "ggg"
       		@result["ggg"] = { attributes[0][0] => attributes[0][1] }
@@ -53,7 +52,3 @@ class MyNokogiri < Nokogiri::XML::SAX::Document
   	def end_document
   	end
 end
-
-#mydoc = MyDocument.new
-#parser = Nokogiri::XML::SAX::Parser.new(mydoc)
-#parser.parse(XML)

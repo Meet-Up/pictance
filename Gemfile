@@ -14,6 +14,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'httpclient'
 gem 'nokogiri'
+gem 'annotate'
+gem "crack"
 
 group :production do
   gem 'pg'
