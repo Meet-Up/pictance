@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		#binding.pry
 		@facebook_user = FbGraph::User.me(current_user.facebook_token).fetch
 		UserPhotosWorker.perform_async(current_user.id)
 	end

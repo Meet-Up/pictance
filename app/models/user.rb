@@ -25,6 +25,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :rememberable, :trackable
   devise :omniauthable, omniauth_providers: [:facebook]
 
+  has_many :data, class_name: 'PhotoData', foreign_key: 'user_id'
+
+
   def self.new_with_session(params, session)
     super.tap do |user|
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]

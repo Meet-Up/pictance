@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131111110000) do
+ActiveRecord::Schema.define(version: 20131111113702) do
 
   create_table "photo_data", force: true do |t|
     t.integer  "user_id"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20131111110000) do
     t.datetime "updated_at"
     t.string   "photo_url"
   end
+
+  add_index "photos", ["photo_id"], name: "index_photos_on_photo_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
