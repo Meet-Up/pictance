@@ -1,4 +1,4 @@
-<% content_for :head do %>
-  <%= javascript_include_tag "fetch_photo" %>
-<% end %>
-
+<h2>Photos with <%= @user.name %></h2>
+<div class="container">
+  <%= render partial: 'users/photo', collection: @photo_datas, as: :photo_data%>
+</div>
