@@ -11,15 +11,15 @@
   <div class="select-gender">
 	<p class="center">
 	  <!--<img src="/assets/gender-mandf-selected.png" alt="男性・女性">-->
-	  <%= link_to ranking_user_path do %>
+	  <%= link_to ranking_users_path do %>
 	  	<%= image_tag "gender-mandf-selected.png", alt: "男性・女性" %>
 	  <% end %>
 	  <!--<img src="/assets/gender-m.png" alt="男性・女性">-->
-	  <%= link_to ranking_user_path(gender: 0) do %>
+	  <%= link_to ranking_users_path(gender: 0) do %>
 	  	<%= image_tag "gender-m.png", alt: "男性" %>
 	  <% end %>
 	  <!--<img src="/assets/gender-f.png" alt="男性・女性">-->
-	  <%= link_to ranking_user_path(gender: 1) do %>
+	  <%= link_to ranking_users_path(gender: 1) do %>
 	  	<%= image_tag "gender-f.png", alt: "女性" %>
 	  <% end %>
 	</p>
