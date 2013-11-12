@@ -11,7 +11,7 @@ $(function(){
 	    	$('#percent-number').text(percentage);
 	    	if(data.progress === 100) {
 	    		setTimeout(function() {
-	    			window.location = '/users/ranking';
+	    			// window.location = '/users/ranking';
 	    		}, 3000);
 	    	}
 	    },
