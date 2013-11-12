@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def loading
+    UserPhotosWorker.perform_async(current_user.id)
     @user = current_user
     @facebook_user = FbGraph::User.me(current_user.facebook_token).fetch
   end
