@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def fetch_photo
     @photo = PhotoData.where(user: current_user).last.photo
-    @progress = Photo.where(user_id: current_user).count / 100
+    @progress = Photo.where(user_id: current_user).count
     render json: { photo: @photo, progress: @progress }
   end
 
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   	@user = current_user
   	@facebook_user = FbGraph::User.me(current_user.facebook_token).fetch
     UserPhotosWorker.perform_async(current_user.id)
-    @scores = current_user.scores.includes(:friend, :photos).order(score: :desc)
+    @scores = current_user.scores.includes(:friend).order(score: :desc)
     @scores = @scores.where(gender: params[:gender]) if params[:gender]
   end
 
