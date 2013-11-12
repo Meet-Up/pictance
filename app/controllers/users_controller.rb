@@ -28,6 +28,7 @@ class UsersController < ApplicationController
     UserPhotosWorker.perform_async(current_user.id)
     @scores = current_user.scores.includes(:friend).order(score: :desc)
     @scores = @scores.joins(:friend).where(users: { gender: params[:gender].to_i }) if params[:gender]
+    @max_score = @scores.maximum(:score)
   end
 
   private
