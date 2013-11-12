@@ -11,16 +11,28 @@
   <div class="select-gender">
 	<p class="center">
 	  <!--<img src="/assets/gender-mandf-selected.png" alt="男性・女性">-->
-	  <%= link_to ranking_user_path do %>
-	  	<%= image_tag "gender-mandf-selected.png", alt: "男性・女性" %>
+	  <%= link_to ranking_users_path do %>
+      <% if @gender == -1 %>
+  	  	<%= image_tag "gender-mandf-selected.png", alt: "男性・女性" %>
+      <% else %>
+        <%= image_tag "gender-mandf.png", alt: "男性・女性" %>
+      <% end %>
 	  <% end %>
 	  <!--<img src="/assets/gender-m.png" alt="男性・女性">-->
-	  <%= link_to ranking_user_path(gender: 0) do %>
-	  	<%= image_tag "gender-m.png", alt: "男性" %>
+	  <%= link_to ranking_users_path(gender: 0) do %>
+      <% if @gender == 0 %>
+        <%= image_tag "gender-m-circle.png", alt: "男性" %>
+      <% else %>
+        <%= image_tag "gender-m.png", alt: "男性" %>
+      <% end %>
 	  <% end %>
 	  <!--<img src="/assets/gender-f.png" alt="男性・女性">-->
-	  <%= link_to ranking_user_path(gender: 1) do %>
-	  	<%= image_tag "gender-f.png", alt: "女性" %>
+	  <%= link_to ranking_users_path(gender: 1) do %>
+      <% if @gender == 1 %>
+        <%= image_tag "gender-f-selected.png", alt: "女性" %>
+      <% else %>
+        <%= image_tag "gender-f.png", alt: "女性" %>
+      <% end %>
 	  <% end %>
 	</p>
   </div>

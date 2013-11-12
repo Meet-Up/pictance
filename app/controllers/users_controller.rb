@@ -7,8 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @score = current_user.scores.where(friend_id: @user.id).first
-    photo_datas = PhotoData.where(user_id: current_user.id).includes(:photo)
-    @photo_datas = photo_datas.joins(:data).where(photo_data: { user_id: @user.id})
+    @photos = @score.photos
   end
 
   def loading
@@ -23,15 +22,12 @@ class UsersController < ApplicationController
   end
 
   def ranking
-    if params[:id].nil?
-      @user = current_user
-    else
-      @user = User.find(user[:id])
-    end
+    @user = current_user
+    @gender = params[:gender].nil? ? -1 : params[:gender].to_i
   	@facebook_user = FbGraph::User.me(current_user.facebook_token).fetch
     UserPhotosWorker.perform_async(current_user.id)
     @scores = current_user.scores.includes(:friend).order(score: :desc)
-    @scores = @scores.where(gender: params[:gender]) if params[:gender]
+    @scores = @scores.joins(:friend).where(users: { gender: params[:gender].to_i }) if params[:gender]
   end
 
   private
