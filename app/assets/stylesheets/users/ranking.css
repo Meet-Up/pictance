@@ -108,6 +108,12 @@
 	letter-spacing: 2px;
 }
 
+.ranking .ranking-main .friend-name h2 a{
+	color: #FF7373;
+	font-size: 25px;
+	letter-spacing: 2px;
+}
+
 .ranking .ranking-main .no1 h2 {
 	font-size: 34px;
 }
