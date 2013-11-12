@@ -7,7 +7,7 @@
     <!--<img src="images/mainvisual.png" alt="Pictance ふたりのキョリをはかるアプリ">-->
     <%= image_tag("mainvisual.png", :alt => "Pictance ふたりのキョリをはかるアプリ") %>
   </h1>
-  <%= link_to user_omniauth_authorize_path(:facebook) do %>
+  <%= link_to user_omniauth_authorize_path(:facebook), id: 'btn-login' do %>
     <div class="btn-login">
       <p>facebook IDで解析！</p>
     </div>

@@ -48,6 +48,10 @@
 	cursor: pointer;
 }
 
+#btn-login {
+	text-decoration: none;
+}
+
 .btn-login a{
 	color: #fff;
 	font-size: 28px;
@@ -58,7 +62,7 @@
 .mainvisual p {
 	color: white;
 	font-size: 35px;
-	padding-top: 45px;
+	padding-top: 50px;
 	padding-left: 80px;
 	-moz-transform: rotate(-5deg);
 	-webkit-transform: rotate(-5deg);
