@@ -9,6 +9,7 @@ $(function(){
 	    	$('.progress-now').width(data.progress + "%");
 	    	var percentage = Math.floor(Math.random() * 40 + 60);
 	    	$('#percent-number').text(percentage);
+	    	$('.percent-friendly').removeClass('hidden');
 	    	if(data.progress === 100) {
 	    		setTimeout(function() {
 	    			window.location = '/users/ranking';

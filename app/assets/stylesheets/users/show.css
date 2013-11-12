@@ -148,3 +148,7 @@
 	height: 15px;
 	background: #FF7373;
 }
+
+.hidden {
+	display: none;
+}
