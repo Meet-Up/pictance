@@ -6,6 +6,10 @@ Pictance::Application.routes.draw do
     member do
       get 'ranking'
     end
+    collection do
+      get 'loading'
+      get 'fetch_photo'
+    end
   end
   resources :static_pages
 end

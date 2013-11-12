@@ -11,4 +11,5 @@
 #
 
 class Photo < ActiveRecord::Base
+  has_many :data, class_name: 'PhotoData', foreign_key: 'photo_id'
 end
