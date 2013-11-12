@@ -1,8 +1,9 @@
-<tr>
-  <td>
-    <%= link_to score.friend.name, user_path(score.friend) %>
-  </td>
-  <td>
-    <%= score.score.round(2) %>
-  </td>
-</tr>
+<div class="ranking-list">
+  <div class="friend-name no1">
+    <h2><%= score_counter + 1 %>, <%= link_to score.friend.name, user_path(score.friend) %></h2>
+    <h3>親密度: <big><%= score.score.round(2) %></big></h3>
+  </div>
+  <div class="friend-photo">
+    <img src="images/mainvisual-back.png">
+  </div>
+</div>

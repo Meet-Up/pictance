@@ -16,16 +16,7 @@
 	</p>
   </div>
   <div class="ranking-main">
-  	<% @scores.each do |score| %>
-    <div class="ranking-list">
-	  <div class="friend-name no1">
-		<h2>１．曽根岡ゆうや</h2>
-		<h3>親密度: <big>80%</big></h3>
-	  </div>
-	  <div class="friend-photo">
-		<img src="images/mainvisual-back.png">
-	  </div>
-	</div>
+    <%= render partial: 'users/user_score', collection: @scores, as: :score %>
   </div>
   <div class="twitter">
 	<p class="center">
