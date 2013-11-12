@@ -23,7 +23,11 @@ class UsersController < ApplicationController
   end
 
   def ranking
-  	@user = current_user
+    if params[:id].nil?
+      @user = current_user
+    else
+      @user = User.find(user[:id])
+    end
   	@facebook_user = FbGraph::User.me(current_user.facebook_token).fetch
     UserPhotosWorker.perform_async(current_user.id)
     @scores = current_user.scores.includes(:friend).order(score: :desc)
