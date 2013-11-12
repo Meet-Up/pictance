@@ -7,6 +7,7 @@ Pictance::Application.routes.draw do
       get 'ranking'
     end
     collection do
+      get 'ranking'
       get 'loading'
       get 'fetch_photo'
     end
