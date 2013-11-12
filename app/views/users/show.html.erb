@@ -2,6 +2,6 @@
   <%= stylesheet_link_tag "users/show", media: "all" %>
 <% end %>
 <h2>Photos with <%= @user.name %></h2>
-<div class="container">
+<div class="photo-container">
   <%= render partial: 'users/photo', collection: @photos, as: :photo %>
 </div>
