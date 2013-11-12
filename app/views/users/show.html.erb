@@ -2,35 +2,6 @@
   <%= stylesheet_link_tag "users/show", media: "all" %>
 <% end %>
 <h2>Photos with <%= @user.name %></h2>
-<div class="container">
-  <%= render partial: 'users/photo', collection: @photo_datas, as: :photo_data%>
-  <div class="loading">
-    <div class="loading-top">
-	  <img src="images/daniel.png" alt="ダニエル・ペレズ">
-	  <p><span></span>さん、こんにちは！</p>
-	  <p>facebookから画像を取得しています……。</p>
-	</div>
-	<hr class="red">
-	<div class="loading-main">
-	  <div class="photo-couples"></div>
-	  <div class="loading-circle">
-		<img src="images/loading.gif">
-	  </div>
-	  <div class="photos">
-		<p class="center">
-		  <img src="images/daniel.png">
-		</p>
-	  </div>
-	  <div class="percent-friendly">
-		<p>親密度<big>80%</big></p>
-	  </div>
-	</div>
-	<hr class="red">
-	<div class="loading-bottom">
-	  <p>少々お待ちください……</p>
-	  <div class="progress-bar">
-	    <div class="progress-now"></div>
-	  </div>
-	</div>
-  </div>
+<div class="photo-container">
+  <%= render partial: 'users/photo', collection: @photos, as: :photo %>
 </div>
