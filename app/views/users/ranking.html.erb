@@ -1,6 +1,14 @@
 <%= content_for :head do %>
   <%= stylesheet_link_tag "users/ranking", media: "all" %>
 <% end %>
+<%= content_for :header do %>
+  <div class="header-wrapper">
+	<a href="index.html">
+	  <!--<img src="images/logo-header.png" alt="Pictance">-->
+	  <%= image_tag "logo-header.png", alt: "Pictance" %>
+	</a>
+  </div>
+<% end %>
 <div class="ranking">
   <div class="ranking-top">
     <!--<img src="images/daniel.png" alt="ダニエル・ペレズ">-->

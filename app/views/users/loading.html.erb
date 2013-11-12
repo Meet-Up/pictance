@@ -2,6 +2,14 @@
   <%= stylesheet_link_tag "users/show", media: "all" %>
   <%= javascript_include_tag "fetch_photo" %>
 <% end %>
+<%= content_for :header do %>
+  <div class="header-wrapper">
+  <a href="index.html">
+    <!--<img src="images/logo-header.png" alt="Pictance">-->
+    <%= image_tag "logo-header.png", alt: "Pictance" %>
+  </a>
+  </div>
+<% end %>
 <h2>Photos with <%= @user.name %></h2>
 <div class="container">
   <div class="loading">
@@ -21,7 +29,7 @@
         <img id="current-photo" src="" alt="Waiting...">
       </p>
     </div>
-    <div class="percent-friendly">
+    <div class="percent-friendly hidden">
     <p>親密度<big><big id="percent-number">80</big>%</big></p>
     </div>
   </div>
