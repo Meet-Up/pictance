@@ -1,9 +1,49 @@
-<h1>Ranking!</h1>
+<%= content_for :head do %>
+  <%= stylesheet_link_tag "users/ranking", media: "all" %>
+<% end %>
+<div class="ranking">
+  <div class="ranking-top">
+    <!--<img src="images/daniel.png" alt="ダニエル・ペレズ">-->
+    <%= image_tag @facebook_user.picture %>
+    <p><span><%= @facebook_user.name %></span>さん</p>
+	<p>あなたに好意を持っている方は、こちらです！</p>
+  </div>
+  <div class="select-gender">
+	<p class="center">
+	  <img src="/assets/gender-mandf-selected.png" alt="男性・女性">
+	  <img src="/assets/gender-m.png" alt="男性・女性">
+	  <img src="/assets/gender-f.png" alt="男性・女性">
+	</p>
+  </div>
+  <div class="ranking-main">
+  	<% @scores.each do |score| %>
+    <div class="ranking-list">
+	  <div class="friend-name no1">
+		<h2>１．曽根岡ゆうや</h2>
+		<h3>親密度: <big>80%</big></h3>
+	  </div>
+	  <div class="friend-photo">
+		<img src="images/mainvisual-back.png">
+	  </div>
+	</div>
+  </div>
+  <div class="twitter">
+	<p class="center">
+	  <a href="https://twitter.com/share" class="twitter-share-button" data-via="kouhoukouhoukou" data-lang="ja" data-size="large" data-count="none">ツイート</a>
+	  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0px],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	</p>
+  </div>
+  <hr class="red">
+  <div class="ranking-bottom">
+	<div class="photo-couples"></div>
+	<div class="logo">
+	  <a href="index.html">
+		<!--<img src="images/logo.png" alt="Pictance">-->
+		<%= image_tag "logo.png" %>
+	  </a>
+	</div>
+  </div>
+  <hr class="red">
+</div>
+<%= render partial: 'users/user_score', collection: @scores, as: :score %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Score</th>
-  </tr>
-  <%= render partial: 'users/user_score', collection: @scores, as: :score %>
-</table>

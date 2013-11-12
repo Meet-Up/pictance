@@ -1,0 +1,163 @@
+.header-wrapper {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header-wrapper img:hover {
+	opacity: 0.8;
+}
+
+.ranking .ranking-top {
+	width: 1000px;
+	margin-top: 130px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ranking .ranking-top img {
+	width: 170px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	border: 1px solid white;
+	-moz-box-shadow: 0 0 9px;
+	-webkit-box-shadow: 0 0 9px;
+	-o-box-shadow: 0 0 9px;
+	-ms-box-shadow: 0 0 9px;
+}
+
+.ranking .ranking-top p {
+	text-align: center;
+	line-height: 2.5em;
+	font-weight: normal;
+	font-size: 27px;
+	letter-spacing: 1px;
+}
+
+.ranking .select-gender {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(/assets/arrow.png) no-repeat;
+	background-position: center 85%;
+}
+
+.ranking .select-gender p {
+	text-align: center;
+}
+
+.ranking .select-gender p img {
+	margin-right: 20px;
+	margin-left: 20px;
+	display: inline;
+}
+
+.ranking .ranking-main {
+	width: 766px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(/assets/heart.png)no-repeat;
+	background-position: right top;
+	overflow: hidden;
+	padding-bottom: 50px;
+}
+
+.ranking .ranking-main .ranking-list {
+	margin-bottom: -40px;
+	overflow: hidden;
+}
+
+.ranking .ranking-main .no1 {
+	background: url(/assets/rank.png)no-repeat;
+	background-position: left 70%;
+}
+
+.ranking .ranking-main .friend-name {
+	float: left;
+	width: 390px;
+	margin-top: 30px;
+	padding-top: 100px;
+	padding-left: 100px;
+}
+
+.ranking .ranking-main .friend-name h2 {
+	color: #FF7373;
+	font-size: 28px;
+	letter-spacing: 2px;
+}
+
+.ranking .ranking-main .no1 h2 {
+	font-size: 34px;
+}
+
+.ranking .ranking-main .friend-name h3 {
+	color: #777;
+	font-size: 20px;
+	font-weight: normal;
+	text-align: right;
+	padding-top: 10px;
+}
+
+.ranking .ranking-main .friend-photo {
+	width: 155px;
+	float: right;
+	padding-right: 40px;
+}
+
+.ranking .ranking-main .friend-photo img {
+	max-width: 148px;
+	max-height: 104px;
+	border: 1px solid white;
+	-moz-box-shadow: 0 0 2px black;
+	-webkit-box-shadow: 0 0 2px black;
+	-o-box-shadow: 0 0 2px black;
+	-ms-box-shadow: 0 0 2px black;
+	-moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+	-ms-transform: rotate(-5deg);
+	margin-top: 100px;
+}
+
+.ranking .twitter {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.ranking .ranking-bottom {
+	position: relative;
+	width: 100%;
+	height: 536px;
+}
+
+.ranking .ranking-bottom .photo-couples {
+	position: absolute;
+	width: 1000%;
+	height: 536px;
+	background: url(/assets/photo-couples.png) repeat-x;
+	-webkit-animation: slide 30s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-animation: slide 30s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	-moz-transform: translate3d(0, 0, 0);
+	z-index: 10;
+}
+
+.ranking .ranking-bottom .logo {
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	margin-left: -284px;
+	z-index: 30;
+}
+
+.ranking .ranking-bottom .logo img:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
