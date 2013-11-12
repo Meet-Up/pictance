@@ -1,0 +1,9 @@
+<h1>Ranking!</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Score</th>
+  </tr>
+  <%= render partial: 'users/user_score', collection: @scores, as: :score %>
+</table>

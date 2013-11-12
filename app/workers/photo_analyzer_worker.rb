@@ -11,6 +11,7 @@ class PhotoAnalyzerWorker
       closest_face = PhotoAnalyzerWorker.compute_closest_face(user, pux_data)
       smile_level = closest_face['smileJudge']['smileLevel'].to_f
       user[:info].data.create(photo_id: id, x: user[:x], y: user[:y], smile: smile_level)
+      user[:info].update(gender: closest_face['genderJudge']['genderResult'].to_i)
     end
     users
   end
