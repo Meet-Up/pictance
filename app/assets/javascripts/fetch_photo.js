@@ -1,10 +1,17 @@
 $(function(){
 	var ajaxURL = "/users/fetch_photo";
+
+	var lastImage;
+
 	setInterval(function(){
 	  $.ajax({
 	    url: ajaxURL,
 	    type: "GET",
 	    success: function(data) {
+	    	if(data.photo.photo_url == lastImage) {
+	    		return;
+	    	}
+	    	lastImage = data.photo.photo_url;
 	    	$('#current-photo').attr('src', data.photo.photo_url);
 	    	$('.progress-now').width(data.progress + "%");
 	    	var percentage = Math.floor(Math.random() * 40 + 60);
