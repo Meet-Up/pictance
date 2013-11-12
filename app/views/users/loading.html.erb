@@ -1,0 +1,36 @@
+<%= content_for :head do %>
+  <%= stylesheet_link_tag "users/show", media: "all" %>
+  <%= javascript_include_tag "fetch_photo" %>
+<% end %>
+<h2>Photos with <%= @user.name %></h2>
+<div class="container">
+  <div class="loading">
+    <div class="loading-top">
+      <%= image_tag @facebook_user.picture(type: 'large'), alt: @user.name %>
+    <p><span><%= @user.name %></span>さん、こんにちは！</p>
+    <p>Facebookから画像を取得しています……。</p>
+  </div>
+  <hr class="red">
+  <div class="loading-main">
+    <div class="photo-couples"></div>
+    <div class="loading-circle">
+    <img src="images/loading.gif">
+    </div>
+    <div class="photos">
+      <p class="center">
+        <img id="current-photo" src="" alt="Waiting...">
+      </p>
+    </div>
+    <div class="percent-friendly">
+    <p>親密度<big><big id="percent-number">80</big>%</big></p>
+    </div>
+  </div>
+  <hr class="red">
+  <div class="loading-bottom">
+    <p>少々お待ちください……</p>
+    <div class="progress-bar">
+      <div class="progress-now"></div>
+    </div>
+  </div>
+  </div>
+</div>

@@ -13,4 +13,8 @@
 class Score < ActiveRecord::Base
   belongs_to :user
   belongs_to :friend, class_name: 'User', foreign_key: 'friend_id'
+
+  has_many :photos,
+  ->(s){ joins(:data).where(photo_data: { user_id: s.friend.id } ) }, through: :user
+
 end
